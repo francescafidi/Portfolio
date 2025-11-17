@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | Francesca Scafidi</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<!-- CONTENITORE PRINCIPALE -->
+<div style="position: relative; display: inline-block;">
+
+    <!-- IMMAGINE PRINCIPALE DELLA HOME -->
+    <img src="Copertina.png" alt="Copertina" style="width: 1508px;">
+
+    <!-- GIF "click here" -->
+    <img src="Click here.gif" alt="Click here"
+         style="position: absolute; top: 419px; left: 1071px; width: 100px;">
+
+    <!-- AREA CLICCABILE CHE AVVIA IL CONTENUTO DELLA SECONDA PAGINA -->
+    <a id="startAnimazione"
+       style="position: absolute; 
+              top: 419px; 
+              left: 1071px; 
+              width: 100px; 
+              height: 55px; 
+              display: block; 
+              background: rgba(0, 0, 0, 0);
+              cursor: pointer;">
+    </a>
+
+</div>
+
+<!-- CONTENUTO DELLA SECONDA PAGINA (inizialmente nascosto) -->
+<div id="sezione2" style="display:none; position: relative; width: 1508px;">
+
+    <!-- Immagine di fondo di pagina1 -->
+    <img src="Indice2.svg" alt="Indice2" width="1508px">
+
+    <!-- Collegamenti invisibili ai PDF (copiati da pagina1.html) -->
+    <a href="Spazio_From Square To Plaza.pdf" target="_blank" style="position: absolute; top: 205px; left: 330px; width: 250px; height: 20px;"></a>
+    <a href="Spazio_Padiglione L3.pdf" target="_blank" style="position: absolute; top: 229px; left: 330px; width: 250px; height: 20px;"></a>
+    <a href="Spazio_Morfemi.pdf" target="_blank" style="position: absolute; top: 253px; left: 330px; width: 250px; height: 20px;"></a>
+    <a href="Spazio_The Route Pavilion.pdf" target="_blank" style="position: absolute; top: 277px; left: 330px; width: 250px; height: 20px;"></a>
+    <a href="Spazio_Poltrona Taiki.pdf" target="_blank" style="position: absolute; top: 301px; left: 330px; width: 250px; height: 20px;"></a>
+    <a href="Spazio_Uffici Toolbox.pdf" target="_blank" style="position: absolute; top: 325px; left: 330px; width: 250px; height: 20px;"></a>
+    <a href="Spazio_InDefinito.pdf" target="_blank" style="position: absolute; top: 349px; left: 330px; width: 250px; height: 20px;"></a>
+    <a href="Spazio_Next Stop.pdf" target="_blank" style="position: absolute; top: 373px; left: 330px; width: 250px; height: 20px;"></a>
+    <a href="Spazio_Designing Speed.pdf" target="_blank" style="position: absolute; top: 397px; left: 330px; width: 250px; height: 44px;"></a>
+
+    <a href="Prodotto_Helios.pdf" target="_blank" style="position: absolute; top: 205px; left: 633px; width: 250px; height: 20px;"></a>
+    <a href="Prodotto_Sistema modulare ARS.pdf" target="_blank" style="position: absolute; top: 229px; left: 633px; width: 250px; height: 20px;"></a>
+    <a href="Prodotto_For All.pdf" target="_blank" style="position: absolute; top: 253px; left: 633px; width: 250px; height: 20px;"></a>
+    <a href="Prodotto_Rielaborazione Partenio.pdf" target="_blank" style="position: absolute; top: 277px; left: 633px; width: 250px; height: 20px;"></a>
+    <a href="Prodotto_Modelli 3D.pdf" target="_blank" style="position: absolute; top: 301px; left: 633px; width: 250px; height: 20px;"></a>
+
+    <a href="Comunicazione_The Creator.pdf" target="_blank" style="position: absolute; top: 205px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_Un Sedicesimo.pdf" target="_blank" style="position: absolute; top: 229px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_PDW.pdf" target="_blank" style="position: absolute; top: 253px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_Spot pubblicitario Zahra.pdf" target="_blank" style="position: absolute; top: 277px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_ReSpace.pdf" target="_blank" style="position: absolute; top: 301px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_Casa Batlló.pdf" target="_blank" style="position: absolute; top: 325px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_De Signatura Rerum.pdf" target="_blank" style="position: absolute; top: 349px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_Monogramma.pdf" target="_blank" style="position: absolute; top: 373px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_La mimosa.pdf" target="_blank" style="position: absolute; top: 397px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_Visual Identity.pdf" target="_blank" style="position: absolute; top: 421px; left: 936px; width: 250px; height: 20px;"></a>
+    <a href="Comunicazione_Traveltech Bros.pdf" target="_blank" style="position: absolute; top: 445px; left: 936px; width: 250px; height: 20px;"></a>
+
+    <!-- VIDEO RIPRESO DA PAGINA1 (sovrapposto) -->
+    <video id="AnimazioneCompleta"
+           style="width: 1508px; position: absolute; top: 0px; left: 0px;"
+           autoplay muted>
+        <source src="Animazione completa.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+
+// quando l’utente clicca sul punto della home
+document.getElementById("startAnimazione").addEventListener("click", function () {
+    document.querySelector("div").style.display = "none"; // nasconde la prima schermata
+    document.getElementById("sezione2").style.display = "block"; // mostra la seconda
+});
+
+// quando il video finisce → sparisce
+document.getElementById("AnimazioneCompleta").addEventListener("ended", function () {
+    this.style.display = "none";
+});
+
+</script>
+
+</body>
+</html>
